@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(169, 169, 255);
+        color: white;
+        font: 18pt sans-serif;
+    }
+</style>
+<body>
+    <h1 id="h1">Ativideade Dom</h1>
+    <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid et unde asperiores doloremque quaerat itaque officia pariatur ipsum! Nobis earum dolorem distinctio dicta nemo magni consequuntur asperiores veritatis excepturi sed.</p>
+     
+    <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid labore tempore magni. Id similique eius numquam beatae necessitatibus a soluta, esse dolorem nostrum ab reiciendis placeat facere, inventore corrupti ut.</p>
+
+    <div id="div1">
+        Clique aqui!
+    </div>
+<br>
+    <h1 id="h2">Mais Atividades</h1>
+
+    <p class="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid et unde asperiores doloremque quaerat itaque officia pariatur ipsum! Nobis earum dolorem distinctio dicta nemo magni consequuntur asperiores veritatis excepturi sed.</p>
+     
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid labore tempore magni. Id similique eius numquam beatae necessitatibus a soluta, esse dolorem nostrum ab reiciendis placeat facere, inventore corrupti ut.</p>
+
+    <div id="div2">
+        <img src="imagens/dog-dancing-brazil-dog.gif" alt="cachorro caramelo br" width="200">
+        <br>
+        Clique aqui de novo!
+    </div>
+
+    <script>
+
+        var h1 = window.document.getElementById("h1");
+        h1.style.background = 'red';
+        h1.style.color = 'white';
+        h1.style.fontWeight = 'bold';
+        h1.style.textAlign = 'center';
+
+        var h2 = window.document.getElementById('h2');
+        h2.style.background = 'blue';
+        h2.style.color = 'white';
+        h2.style.fontWeight = 'bold';
+        h2.style.textAlign = 'center';
+
+        var p1 = window.document.getElementsByClassName('p1')[0];
+        p1.style.background = 'transparent';
+        p1.style.color = 'black';
+        p1.style.fontWeight = 'bold';
+        p1.style.textAlign = 'center';
+
+        var p1 = window.document.getElementsByClassName('p1')[1];
+        p1.style.background = 'yellow';
+        p1.style.color = 'black';
+        p1.style.fontWeight = 'bold';
+        p1.style.textAlign = 'center';
+
+        var p2 = window.document.getElementsByClassName('p2')[0];
+        p2.style.background = 'black';
+        p2.style.color = 'white';
+        p2.style.fontWeight = 'bold';
+        p2.style.textAlign = 'center';
+
+        var p2 = window.document.getElementsByClassName('p2')[1];
+        p2.style.background = 'red';
+        p2.style.color = 'black';
+        p2.style.fontWeight = 'bold';
+        p2.style.textAlign = 'center';
+
+        var div1 = window.document.getElementById('div1');
+        div1.style.background = 'green';
+        div1.style.color = 'white';
+        div1.style.fontWeight = 'bold';
+        div1.style.textAlign = 'center';
+        
+        
+        var div1 = window.document.getElementById('div2');
+        div1.style.background = 'green';
+        div1.style.color = 'white';
+        div1.style.fontWeight = 'bold';
+        div1.style.textAlign = 'center';
+        div1.img.background = 'yellow';
+
+    </script>
+</body>
+</html>

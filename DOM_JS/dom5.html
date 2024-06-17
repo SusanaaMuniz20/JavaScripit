@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 252, 246);
+        color: white;
+        font: 18pt sans-serif;
+
+        h1{
+            color: rgb(0, 0, 0);
+            font-size: 30pt;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .container{
+            width: 300px;
+            height: 100px;
+            background-color: rgb(255, 213, 130);
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            font-size: 18pt;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        #number1 {
+
+            background-color: rgb(255, 104, 11);
+            color: white;
+            width: 250px;
+            height: 40px;
+            font-size: 18pt;
+            font-family: sans-serif
+        }
+    }
+</style>
+<body>
+    <h1>Velocidade</h1>
+    
+    <div class="container">
+        <form>
+            <input type="number" id="velo" >
+            <p id="resVelo"></p>
+            <input id="number1" type="button" value="Calcular velocidade" onclick="velocidade()">
+        </form>
+        <script>
+            function velocidade(){
+                var velo = Number(document.getElementById('velo').value);
+                var resVelocidade = document.getElementById('resVelocidade');
+                
+                if(velo == 60){
+                    window.alert("Você está na velocidade permitida");
+                } else if(velo == 80){
+                    window.alert("Cuidado! Você ainda está na velocidade permitida");
+                } else if(velo > 80){
+                    window.alert("Você foi muiltado!");
+                }
+            }
+        </script>
+
+
+    </div>
+   
+</body>
+</html>

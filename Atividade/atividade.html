@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:black;
+        color: white;
+        font: normal 18pt sans-serif;
+    }
+</style>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai um resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JAvaScript</p>
+    <div>
+        Clique aqui!
+    </div>
+    <script>
+        document.querySelector('div').addEventListener('click', function(){
+            document.querySelector('p').textContent = 'Você clicou no div'
+        })
+    </script>
+</body>
+</html>

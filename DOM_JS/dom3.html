@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-color: rgb(241, 241, 255);
+        color: white;
+        font: 18pt sans-serif;
+        text-align: center;
+        
+
+        h1 { font-size:large; font-weight: bold; 
+            text-align: center; 
+            color: black;
+        }
+
+            
+        }
+
+        .container {
+            width: 250px;
+            height: 130px;
+            background-color: rgb(255, 200, 49);
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            font-size: 18pt;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+</style>
+<body><br>
+    <h1>Operações Matemáticas</h1>
+<br>
+    <div class="container">
+    <form>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <select id="operacao">
+            <option>Selecione a operação</option>
+            <option>Soma</option>
+            <option>Subtracao</option>
+            <option>Multiplicacao</option>
+            <option>Divisao</option>
+        </select>
+        <input type="button" value="Fazer calculo" onclick="Operacao()">
+    </form>
+</div>
+<br>
+
+<div class="container">
+    <div id="resOperacao"></div>
+</div>
+<script>
+    function Operacao() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var resOperacao = document.getElementById("resOperacao");
+        var operacao = document.getElementById("operacao").value;
+        
+        var resultado;
+
+        switch (operacao) {
+            case "Soma":
+                resultado = num1 + num2;
+                break;
+            case "Subtracao":
+                resultado = num1 - num2;
+                break;
+            case "Multiplicacao":
+                resultado = num1 * num2;
+                break;
+            case "Divisao":
+                resultado = num1 / num2;
+                break;
+            default:
+                break;
+        }
+        resOperacao.innerHTML = `Você utilizou a operação ${operacao} e o resultado foi ${resultado}`;
+    }
+</script>
+</div>
+
+</body>
+</html>
