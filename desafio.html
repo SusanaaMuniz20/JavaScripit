@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container1 {
+    text-align: center;
+}
+
+#titulo{
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0066, #ffcc00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(255, 201, 201, 0);
+    transition: transform 0.3s, text-shadow 0.3s;
+    animation: gradient 3s infinite;
+    cursor: pointer;
+}
+
+#titulo:hover {
+    transform: scale(1.1);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.container {
+    text-align: center;
+}
+
+.cell {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cell-part {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell-part:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+#nucleo{
+    border: 2px solid #ff0000;
+    
+}
+
+#mitocondria{
+    border: 2px solid #f500d4;
+}
+
+#ribossomos{
+    border: 2px solid #dbdf00;
+}
+
+#descricao {
+    margin-top: 20px;
+    font-size: 18px;
+}
+</style>
+
+
+<body>
+<div class="container1">
+    <h1 id="titulo">Biologia: Citologia </h1>
+</div>
+<br>
+    <div class="container">
+        <h1>Partes de uma Célula Animal</h1>
+        <div class="cell">
+            <div id="nucleo" class="cell-part" onclick="clicar('nucleo')" onmouseenter="entrar('nucleo')" onmouseout="sair('nucleo')">
+                Núcleo
+            </div>
+            <div id="mitocondria" class="cell-part" onclick="clicar('mitocondria')" onmouseenter="entrar('mitocondria')" onmouseout="sair('mitocondria')">
+                Mitocôndria
+            </div>
+            <div id="ribossomos" class="cell-part" onclick="clicar('ribossomos')" onmouseenter="entrar('ribossomos')" onmouseout="sair('ribossomos')">
+                Ribossomos
+            </div>
+            
+        </div>
+        <p id="descricao"></p>
+    </div>
+
+<script>
+    function clicar(parte) {
+    const descricao = document.getElementById("descricao");
+    if (parte === 'nucleo') {
+        descricao.textContent = "O núcleo é o centro de controle da célula, onde o DNA está localizado.";
+    } else if (parte === 'mitocondria') {
+        descricao.textContent = "As mitocôndrias são as usinas de energia da célula, produzindo ATP.";
+    } else if (parte === 'ribossomos') {
+        descricao.textContent = "Os ribossomos são responsáveis pela síntese de proteínas na célula.";
+    }
+    
+    descricao.style.color = "black";
+}
+
+function entrar(parte) {
+    const descricao = document.getElementById("descricao");
+    if (parte === 'nucleo') {
+        descricao.textContent = "Núcleo";
+    } else if (parte === 'mitocondria') {
+        descricao.textContent = "Mitocôndria";
+    } else if (parte === 'ribossomos') {
+        descricao.textContent = "Ribossomos";
+    }
+    
+    descricao.style.color = "black";
+}
+
+function sair(parte) {
+    const descricao = document.getElementById("descricao");
+    descricao.textContent = "";
+}
+
+
+document.getElementById('titulo').addEventListener('click', function(){
+    this.style.color = this.style.color === 'transparent' ? '#ff0066' : 'transparente';
+});
+</script>
+
+
+
+</body>
+</html>
